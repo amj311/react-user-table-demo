@@ -2,7 +2,7 @@ import axios from "axios";
 import { UserListModel, UsersPage, UserViewModel } from "../../../models/UserModels";
 import IUsersService from "./IUsersService";
 
-const TARGET_USER_TOTAL = 10;
+const TARGET_USER_TOTAL = 7000;
 const SEED = "clozd_rocks";
 const FIELDS = "login,name,picture,email,location,phone,dob"
 
