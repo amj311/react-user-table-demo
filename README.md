@@ -5,7 +5,7 @@ This repo demonstrates how React.js can be used to efficiently fetch and display
 
 <img src="capture.png" />
 
-The express server loads 7,000 user records from randomuser.me and parses them for quick and consitent access. The saved data is exposed through an API that allows the following actions:
+The express server loads 7,000 user records from randomuser.me and parses them for quick and repeated access, as if they were stored in a local database. The saved data is exposed through an API that allows the following actions:
 
 - Get one page of the user data with only a subset of fields.
 - Get the entire record for one user by providing the user's ID.
