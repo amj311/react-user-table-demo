@@ -33,9 +33,9 @@ const App: React.FC = () => {
       <div style={appWrapperStyle}>
         <Router>
           <Routes>
-            <Route path="/" element={<UserTable />} />
-            <Route path="/:page" element={<UserTable />} />
             <Route path="user/:id" element={<UserProfile />} />
+            {/* Redirect any other path to the table */}
+            <Route path="*" element={<UserTable />} />
           </Routes>
         </Router>
       </div>      
