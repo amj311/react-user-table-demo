@@ -1,7 +1,6 @@
-import React, { CSSProperties, useState } from 'react';
+import React, { CSSProperties } from 'react';
 
-import { UsersPage, UserListModel } from '../../../models/UserModels';
-import { userInfo } from 'os';
+import { UserListModel } from '../../../models/UserModels';
 
 const rowWrapperStyle:CSSProperties = {
     display: "grid",

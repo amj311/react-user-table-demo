@@ -1,7 +1,6 @@
 import React, { CSSProperties, useState } from 'react';
 
-import { UsersPage, UserViewModel } from '../../../models/UserModels';
-import { userInfo } from 'os';
+import { UserViewModel } from '../../../models/UserModels';
 import { Link, useParams } from 'react-router-dom';
 import DemoUserService from '../services/DemoUserService';
 import moment from 'moment';
@@ -47,8 +46,6 @@ const UserProfile = () => {
     });
     return <div>Looking for user...</div>;
   }
-
-  console.log(user)
 
   return (
     <>

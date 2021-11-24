@@ -13,3 +13,9 @@ The express server loads 7,000 user records from randomuser.me and parses them f
 The React frontend displays a table of user data, with pagination controls. The state holds only the list data for the users of the current page, and requests a new page of data each time the page changes.
 
 When a row from the table is clicked, the app requests the full User data from the server to display in a separate User Profile view.
+
+## Running the App
+
+Start the server by running `npm run dev` in `/backend`. npm will start the Typescript compiler in watch mode so it will recompile on any changes, and will launch the server with Nodemon so it restarts whenever the code is recompiled.
+
+Run the React dev server with `npm run start` in `/frontend`.
