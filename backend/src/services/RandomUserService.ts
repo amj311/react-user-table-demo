@@ -17,10 +17,10 @@ export default class RandomUserService implements IUsersService {
     }
 
     private async fetchUsersIntoData(page:number, numUsers: number) {
-        let res = await axios.get(`https://randomuser.me/api/?page=${page}&results=${numUsers}&seed=${SEED}&inc=${FIELDS}&nat=us`);
+        let res = await axios.get(`https://randomuser.me/api/?page=${page}&results=${numUsers}&seed=${SEED}&inc=${FIELDS}&nat=us,gb`);
         res.data.results.forEach((u:any)=>{
-            let {street,city,country,postcode} = u.location;
-            
+            let {street,city,state,country,postcode} = u.location;
+            let address = {street,city,state,country,postcode};
             this.data.set(u.login.uuid, new UserViewModel(
                 u.login.uuid,
                 u.name.first+" "+u.name.last,
@@ -28,10 +28,7 @@ export default class RandomUserService implements IUsersService {
                 u.email,
                 u.phone,
                 u.dob.date,
-                street,
-                city,
-                country,
-                postcode,
+                address,
             ))
         });
     }
@@ -69,8 +66,7 @@ export default class RandomUserService implements IUsersService {
                     u.id,
                     u.name,
                     u.email,
-                    u.city,
-                    u.country
+                    u.address
                 )
             })
         }

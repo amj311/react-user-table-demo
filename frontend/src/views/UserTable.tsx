@@ -69,7 +69,6 @@ const UserTable = () => {
 
   return (
     <>
-    
       <h3 style={{marginTop:"0"}}>Users</h3>
 
       <div style={tableContentsStyle}>

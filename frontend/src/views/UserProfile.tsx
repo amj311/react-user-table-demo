@@ -60,9 +60,9 @@ const UserProfile = () => {
       <div style={dataRow}><label>Email: </label><span>{user.email}</span></div>
       <div style={dataRow}><label>Birthday: </label><span>{moment(user.dob).format("MMM m, YYYY")}</span></div>
       <div style={dataRow}><label>Address: </label><span style={{textAlign: "right"}}>
-        {user.street.number} {user.street.name}<br />
-        {user.city}, {user.country}<br />
-        {user.postcode}<br />
+        {user.address.street.number} {user.address.street.name}<br />
+        {user.address.city}, {user.address.state}<br />
+        {user.address.country} {user.address.postcode}<br />
       </span></div>
     </div>
     </>
