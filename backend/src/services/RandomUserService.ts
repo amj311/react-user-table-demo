@@ -14,7 +14,7 @@ const FIELDS = "login,name,picture,email,location,phone,dob"
  * This implementation loads 7000 users into memory in order to deliver consistent
  * and rapid responses. This approach saves us from making a request to
  * randomuser.me whenever a page is requested, which is slow for our users and
- * unkind to their service.
+ * can cause their server to block our request.
  */
 export default class RandomUserService implements IUsersService {
     private data: Map<string,UserViewModel> = new Map();
